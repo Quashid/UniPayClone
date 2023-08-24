@@ -1,15 +1,16 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import styles from "../styles/ScrollAnimation.module.css";
 
 const ScrollAnimation = ({ children }) => {
   const [isVisible, setIsVisible] = useState(false);
+  const triggerPointRef = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => {
       const triggerPoint = window.innerHeight * 0.8;
       const elementTop = window.scrollY + triggerPoint;
 
-      const elementOffset = document.querySelector("#triggerPoint").offsetTop;
+      const elementOffset = triggerPointRef.current.offsetTop;
 
       if (elementTop > elementOffset) {
         setIsVisible(true);
@@ -23,7 +24,10 @@ const ScrollAnimation = ({ children }) => {
   }, []);
 
   return (
-    <div className={`${styles.item} ${isVisible ? styles.active : ""}`}>
+    <div
+      ref={triggerPointRef}
+      className={`${styles.item} ${isVisible ? styles.active : ""}`}
+    >
       {children}
     </div>
   );

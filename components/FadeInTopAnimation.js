@@ -6,7 +6,7 @@ function FadeInFromTop({ children }) {
   const animatedElementRef = useRef(null);
 
   useEffect(() => {
-    function isElementInViewport(el) {
+    const isElementInViewport = (el) => {
       if (!el) {
         return false;
       }
@@ -14,20 +14,18 @@ function FadeInFromTop({ children }) {
       return (
         rect.top >= 0 &&
         rect.left >= 0 &&
-        rect.bottom <=
-          (window.innerHeight || document.documentElement.clientHeight) &&
-        rect.right <=
-          (window.innerWidth || document.documentElement.clientWidth)
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
       );
-    }
+    };
 
-    function handleScroll() {
+    const handleScroll = () => {
       const animatedElement = animatedElementRef.current;
       if (isElementInViewport(animatedElement)) {
         setIsVisible(true);
         window.removeEventListener("scroll", handleScroll);
       }
-    }
+    };
 
     window.addEventListener("scroll", handleScroll);
 
@@ -36,13 +34,10 @@ function FadeInFromTop({ children }) {
     };
   }, []);
 
+  const animationClass = isVisible ? styles["fade-in-animation"] : "";
+
   return (
-    <div
-      className={`${styles["fade-in-from-top"]} ${
-        isVisible ? `${styles["fade-in-animation"]}` : ""
-      }`}
-      ref={animatedElementRef}
-    >
+    <div className={`${styles["fade-in-from-top"]} ${animationClass}`} ref={animatedElementRef}>
       {children}
     </div>
   );
