@@ -1,0 +1,28 @@
+.item {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s, transform 1s;
+    margin: 20px 0;
+  }
+  
+  .active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+.item:nth-child(1).active {
+    transition-delay: 0.2s;
+  }
+  
+  .item:nth-child(2).active {
+    transition-delay: 0.4s;
+  }
+  
+  .item:nth-child(3).active {
+    transition-delay: 0.6s;
+  }
+
+  .item:nth-child(4).active {
+    transition-delay: 0.8s;
+  }
+  

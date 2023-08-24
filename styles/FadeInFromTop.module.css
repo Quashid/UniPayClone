@@ -1,0 +1,22 @@
+@keyframes fade-in-from-top {
+    0% {
+      opacity: 0;
+      transform: translateY(-100px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .fade-in-from-top {
+    opacity: 0;
+    transition: opacity 1s ease-out, transform 1s ease-out;
+  }
+  
+  .fade-in-animation {
+    opacity: 1;
+    transform: translateY(0);
+    animation: fade-in-from-top 1s ease-out forwards;
+  }
+  

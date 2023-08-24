@@ -1,0 +1,505 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.landingWrapper {
+  width: 100vw;
+  height: 100vh;
+  padding: 1vh 10vw 0vh 10vw;
+}
+
+.landingWrapper video{
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left:0;
+  z-index: -1;
+}
+
+.header{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.uniLogo{
+  cursor: pointer;
+  width: 100px;
+  height: 100px;
+}
+
+.uniLogo img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.payCheck{
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 11px 30px;
+  font-weight: 500;
+  border-radius: 0.75rem;
+  border: none;
+}
+
+.burgerMenu{
+  display: none;
+}
+.payCheck:hover{
+  background-color: black;
+  color: rgba(125, 237, 221, 1);
+}
+.body{
+  display: flex;
+  height: 80vh;
+  width: 100%;
+}
+
+.leftSection{
+  display: flex;
+  flex:1;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.mainText{
+
+  font-size: 3rem;
+  line-height: 3rem;
+  color: black;
+  width: 500px;
+}
+.rewardsText{
+  display: flex;
+  flex-direction: row;
+  column-gap:1vh;
+  font-size: 1rem;
+  line-height: 1rem;
+  color: black;
+  width: 100%;
+  padding-top: 5vh;
+}
+.form{
+  display: flex;
+  flex-direction: row;
+  color: black;
+  margin-top: 5vh;
+  padding: 3px;
+  background-color: black;
+  border-radius: 0.75rem;
+  width: 60%;
+  height: 6vh;
+  justify-content: center;
+  align-items: center;
+}
+.inputField {
+  flex:2;
+  margin: 0vh 0.5rem;
+
+}
+.inputField input{
+  outline: none;
+  border: none;
+  background-color:transparent;
+  font-size: 0.8rem ;
+  
+}
+.applyNow{
+  flex:1;
+  display: flex;
+  align-self: flex-end;
+  height: 100%;
+  background-color: rgb(253,239,120);
+  color: black;
+  border-radius: 0.75rem;
+  border: none;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  align-items: center;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.disclaimerSection{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1vw;
+  width: 50%;
+  margin-top: 2vh;
+}
+.disclaimerSection input{
+  background-color: white;
+}
+.disclaimer{
+  font-size: 0.5rem;
+  color: black;
+}
+.applyNowMobile{
+  display: none;
+}
+.rightSection{
+  display: flex;
+  flex:1;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center
+}
+.uniImage{
+  width: 100%;
+  height: 50vh;
+}
+
+.uniImage img{
+  object-fit: contain;
+  height: 100%;
+  width: 100%;
+}
+.descriptionWrapper{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.2;
+  background-color: white;
+}
+.description{
+  margin: 20vh;
+  text-align: center;
+  font-size: 2.5rem;
+  line-height: 2.1rem;
+  font-weight: 500;
+}
+.description p {
+  color: black;
+}
+.description span{
+  color: #9ea7ae;
+  font-weight: 400!important;
+
+}
+.description strong{
+  color: black;
+  font-weight: 550;
+}
+.downArrowContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20vh;
+  width: 20vh;
+  border-radius: 100%;
+  background:linear-gradient(140.86deg, #65ECD8 11.07%, #FDEF78 80.28%);
+  margin-bottom: 10vh;
+}
+
+.downArrow img{
+  rotate: 90deg;
+  height: 10vh;
+  width: 10vh;
+}
+
+.rewardsContainer{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+}
+.rewardsTextWrapper{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+.rewardsText1{
+  margin: 20vh;
+  color:black;
+  font-size: 2.5rem;
+  width: 45%;
+  line-height: 2.7rem;
+  text-align: center;
+  font-weight: 500;
+}
+.rewardsText1 span{
+  color: #65ECD8;
+}
+.addedBenefitsContainer{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 70%;
+  margin-bottom: 10vh;
+}
+.commitmentContainer{
+  height:70vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgba(34, 38, 39, 0.7);
+  row-gap: 3.7vh;
+}
+.commitmentText{
+  width: 60%;
+  line-height: 3rem;
+  text-align: center;
+  font-size: 3rem;
+}
+.commitmentText span{
+  background:  linear-gradient(140.86deg, #65ECD8 11.07%, #FDEF78 80.28%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.bankPartnerText{
+  width: 27%;
+  line-height: 1.4rem;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.6);
+}
+.commitmentContainer img {
+  height: 20vh;
+  width: 20vh;
+  object-fit: contain;
+}
+.disclaimerContainer{
+  width: 100%;
+  height: 20vh;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.disclaimerText{
+  width: 30%;
+  font-size: 0.8rem;
+  line-height: 1.4rem;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.8);
+}
+.downloadContainer{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  background:  linear-gradient(140.86deg, #65ECD8 11.07%, #FDEF78 80.28%);
+  color:black;
+  font-weight: 500;
+  font-size: 1.5rem;
+  height: 35vh;
+  gap:4vw
+}
+.downloadLinksContainer{
+  display: flex;
+  flex-direction: row;
+  font-size: 0.8rem;
+  gap:1vw;
+  justify-content: center;
+  align-items: center;
+ 
+}
+.downloadLink{
+  width:10vw;
+  height: 8vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid black;
+  border-color: black;
+  border-radius: 10px;
+}
+.securityContainer{
+  display: flex;
+  width: 100%;
+  background-color: rgba(34,34,34,1);
+  height: 10vh;
+  justify-content: center;
+  align-items: center;
+  color:rgba(141,141,149,1);
+  font-size: 0.7rem;
+  gap:1vw
+}
+.securityContainer img{
+  height: 8vh;
+  width: 8vh;
+  object-fit: contain;
+}
+.footer{
+  display: flex;
+  width: 100vw;
+  height:40vh;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  color:rgba(141,141,149,1);;
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+.footerLogo{
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: white;
+}
+.footerInnerWrapper{
+  width: 70vw;
+  row-gap: 2vh;
+  display: flex;
+  padding-bottom: 8vh;
+  flex-direction: column;
+  white-space: pre-wrap;
+  padding-bottom: 1px;
+  position: relative;
+  background:  linear-gradient(140.86deg, #65ECD8 11.07%, #FDEF78 80.28%);;
+}
+.footerInner{
+  width: 70vw;
+  row-gap: 2vh;
+  display: flex;
+  flex-direction: column;
+  white-space: pre-wrap;
+  z-index: 10;
+  padding-bottom: 8vh;
+  background-color: black;
+}
+.footerLinks{
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.7rem;
+  font-weight: 300;
+  height: 10vh;
+
+}
+.socialLinks{
+  display: flex;
+  column-gap: 1vw;
+}
+.advantagesWrapper{
+  display: flex;
+  flex-direction: column;
+}
+.cicleContainer{
+  display: block;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 395%;
+}
+.cicleContainer img{
+  position: absolute;
+
+  height: 130vh;
+  width: 130vh;
+  object-fit: contain;
+}
+@media screen and (max-aspect-ratio: 13/9){
+  .payCheck{
+    display: none;
+  }
+  .burgerMenu{
+    display: block;
+  }
+  .body{
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+  }
+  .rightSection{
+    align-items: flex-start;
+  }
+  .uniImage{
+    width: 25vh;
+    height: 25vh;
+  }
+  .mainText{
+    font-size: 1.8rem;
+    line-height: 2rem;
+    width: 80%;
+  }
+  .landingWrapper{
+    padding: 1vh 5vw 0vh 5vw;
+  }
+  .rewardsText{
+    font-size: 0.7rem;
+    padding-top: 2vh;
+  }
+  .form{
+    display: none;
+  }
+  .disclaimerSection{
+    display: none;
+  }
+  .applyNowMobile{
+    display: block;
+    width: 100%;
+    position:fixed;
+    bottom: 0;
+    left: 0;
+    padding: 2vh 2vw;
+    z-index: 10;
+  }
+  .applyNowContainer{
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(253, 239, 120);
+    justify-content: space-between;
+    align-items: center;
+    padding: 1vh 3vw;
+    border-radius: 0.3rem;
+    box-shadow: 0.6rem 0.6rem 3rem 0.4rem rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 0.6rem 0.6rem 3rem 0.4rem rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0.6rem 0.6rem 3rem 0.4rem rgba(0, 0, 0, 0.75);
+  }
+  .applyNowText{
+    color: black;
+  }
+  .rightArrow{
+    display: flex;
+    height: 100%;
+    align-items: center;
+  }
+  .rightArrow img{
+    width: 4vw;
+    height: 3vh;
+  }
+  .descriptionWrapper{
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .description{
+    margin: 5vh 5vw;
+    width: 90%;
+    font-size: 1.5rem;
+  }
+  .downArrowContainer{
+    height: 10vh;
+    width: 10vh;
+    margin: 0 5vw
+  }
+  .downArrow img{
+    height: 6vh;
+    width: 6vh;
+  }
+  .rewardsContainer{
+    padding-top: 8vh;
+  }
+  .commitmentText{
+    width: 60%;
+    line-height: 1.5rem;
+    text-align: center;
+    font-size: 1.5rem;
+  }
+}
